@@ -1,0 +1,309 @@
+@import "./general-variables";
+
+.profile-wrapper {
+  background-color: $light-black;
+  padding: 2rem;
+  min-height: 70vh;
+  position: relative;
+
+  .img-404 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .profile-container {
+    @extend %container;
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    .profile-content-info {
+      width: 100%;
+      min-width: 280px;
+      max-width: 400px;
+
+      .profile-content-top {
+        position: relative;
+        .img-div-content {
+          border-radius: 100%;
+
+          img {
+            border: 1px solid $border-color;
+            border-radius: 100%;
+            width: 100%;
+          }
+        }
+        .smile-content {
+          position: absolute;
+          right: 0;
+          bottom: 105px;
+          background-color: $light-black;
+          border: 1px solid $border-color;
+          border-radius: 100%;
+          i {
+            padding: 0.5rem;
+
+            &:hover {
+              color: $blue;
+            }
+          }
+          p {
+            display: none;
+          }
+        }
+        .profile-username-content {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0.8rem;
+          h2 {
+            color: $white;
+            font-size: 1.3rem;
+          }
+          p {
+            color: $gray;
+            font-size: 1.1rem;
+            margin-top: -0.2rem;
+          }
+        }
+      }
+
+      p {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+      button {
+        margin-top: 1rem;
+        width: 100%;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        background-color: $hover-color;
+        color: $white;
+        padding: 0.3rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover {
+          background-color: #32363d;
+        }
+      }
+      .profile-follows-content {
+        .follows-container {
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+          margin-top: 1rem;
+          .followers-content {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+            cursor: pointer;
+
+            &:hover i,
+            &:hover p,
+            &:hover span {
+              color: $blue;
+            }
+            i {
+              font-size: 0.9rem;
+            }
+            p {
+              font-size: 0.8rem;
+              margin-top: -1px;
+              font-weight: 600;
+            }
+            span {
+              font-size: 0.8rem;
+              color: $gray;
+            }
+
+            &:visited {
+              text-decoration: none;
+            }
+          }
+          .following-content {
+            text-decoration: none;
+            &:visited {
+              text-decoration: none;
+            }
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            cursor: pointer;
+            &:hover p,
+            &:hover span {
+              color: $blue;
+            }
+            p {
+              font-size: 0.8rem;
+              margin-top: -1px;
+              font-weight: 600;
+            }
+            span {
+              font-size: 0.8rem;
+              color: $gray;
+            }
+          }
+        }
+        .profile-email-link-content {
+          margin-top: 1.1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.3rem;
+          padding-bottom: 1rem;
+          border-bottom: 1px solid $border-color;
+          .el-content {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            i {
+              font-size: 1rem;
+            }
+            a {
+              text-decoration: none;
+              color: $white;
+              font-size: 0.8rem;
+              &:hover {
+                color: $blue;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      .profile-achievements-content {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        h3 {
+          color: $white;
+          font-size: 0.9rem;
+          font-weight: 500;
+        }
+        .achievements-items {
+          display: flex;
+          img {
+            width: 60px;
+            object-fit: cover;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .profile-long-info {
+      .profile-readme {
+        padding: 1rem;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+
+        * {
+          color: $white;
+          font-size: 0.9rem;
+          list-style: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .profile-wrapper {
+    .profile-container {
+      flex-direction: column;
+      .profile-content-info {
+        width: 100%;
+        min-width: 260px;
+        max-width: 100%;
+
+        .profile-content-top {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 0.8rem;
+          .img-div-content {
+            order: 1;
+            max-width: 20%;
+            min-width: 100px;
+          }
+          .smile-content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            order: 3;
+            position: static;
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover p,
+            &:hover i {
+              color: $blue;
+            }
+            p {
+              display: block;
+              margin: 0;
+              font-size: 0.8rem;
+              color: $gray;
+            }
+            i {
+              padding: 0.5rem;
+            }
+          }
+          .profile-username-content {
+            order: 2;
+          }
+        }
+
+        .profile-follows-content {
+          display: flex;
+          flex-direction: column;
+          margin-top: 1rem;
+          padding-bottom: 0rem;
+
+          .follows-container {
+            order: 2;
+            border-bottom: 1px solid $border-color;
+            margin-top: 0;
+            padding-bottom: 1rem;
+          }
+          .profile-email-link-content {
+            order: 1;
+            border: none;
+          }
+          .profile-achievements-content {
+            order: 3;
+          }
+        }
+      }
+    }
+  }
+  .profile-readme {
+    #readme-content {
+      img {
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .profile-readme {
+    #readme-content {
+      img {
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .profile-readme {
+    #readme-content {
+      img {
+        max-width: 200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import "./general-variables";
+
+.profile-repositories {
+  margin-top: 1.5rem;
+  .profile-repo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h4 {
+      font-size: 0.9rem;
+      color: $white;
+      font-weight: 400;
+    }
+    span {
+      color: $blue;
+      font-size: 0.7rem;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .profile-repo-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+    .profile-repo-item {
+      padding: 1rem;
+      border: 1px solid $border-color;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      gap: 0.7rem;
+
+      .repo-item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+          color: $blue;
+          font-size: 0.8rem;
+          font-weight: 600;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        span {
+          color: $gray;
+          border-radius: 10px;
+          border: 1px solid $border-color;
+          font-size: 0.7rem;
+          padding: 0rem 0.3rem;
+        }
+      }
+      .repo-item-info {
+        font-size: 0.7rem;
+        color: $gray;
+        cursor: pointer;
+      }
+      .repo-item-footer {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin-top: auto;
+        .repo-language-type {
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+          i {
+            font-size: 0.8rem;
+            color: #e34c26;
+          }
+          p {
+            font-size: 0.8rem;
+            color: $gray;
+            margin-top: -2px;
+          }
+        }
+        .repo-item-stars {
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+          cursor: pointer;
+          &:hover i,
+          &:hover p {
+            color: $blue;
+          }
+          i {
+            font-size: 0.9rem;
+            color: $gray;
+          }
+          p {
+            margin-top: -1px;
+            font-size: 0.8rem;
+            color: $gray;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .profile-repositories {
+    .profile-repo-items {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    }
+  }
+}

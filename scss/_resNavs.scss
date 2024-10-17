@@ -1,0 +1,213 @@
+@import "./general-variables";
+
+.nav-res {
+  background-color: $light-black;
+  width: 290px;
+  position: absolute;
+  height: 100vh;
+  z-index: 11;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: transform 0.4s ease;
+
+  .nav-wrapper {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $border-color;
+    .nav-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 0.5rem;
+      margin-bottom: 0.1rem;
+      i {
+        font-size: 1rem;
+        padding: 0.4rem;
+        border-radius: 5px;
+        &:hover {
+          @extend %hover-effect;
+        }
+      }
+      span {
+        color: $gray;
+        font-size: 0.7rem;
+        font-weight: 700;
+      }
+    }
+
+    .fake-show {
+      color: $gray;
+      font-size: 0.7rem;
+      text-decoration: none;
+      padding: 0.3rem 0.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 700;
+      display: block;
+      margin-top: 0.5rem;
+      &:hover {
+        @extend %hover-effect;
+      }
+    }
+
+    .nav-items-repo,
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+
+      a {
+        color: $gray;
+        font-size: 0.7rem;
+        text-decoration: none;
+        padding: 0.3rem 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 700;
+
+        &:hover {
+          @extend %hover-effect;
+        }
+      }
+      .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.3rem 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+          @extend %hover-effect;
+        }
+        img {
+          @extend %header-icon;
+          width: 16px;
+          padding: 0rem !important;
+          border-radius: 100% !important;
+        }
+        i {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+        span {
+          border-radius: 15px;
+          border: 1px solid $white;
+          color: $gray;
+          font-size: 0.7rem;
+          padding: 0.1rem 0.4rem;
+          margin-left: auto;
+        }
+
+        .repo-left-name {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .footer-res-nav {
+    p {
+      color: $gray;
+      font-size: 0.7rem;
+    }
+    .footer-list {
+      margin-top: 0.5rem;
+      line-height: 0.7rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      a {
+        text-decoration: none;
+        font-size: 0.7rem;
+        white-space: nowrap;
+        color: $blue;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.nav-left {
+  left: 0;
+  top: 0;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+  border-right: 1px solid $border-color;
+  transform: translate(-300px, 0px);
+  .nav-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+      &:nth-child(1) {
+        color: $white;
+        font-size: 2.1rem;
+      }
+      &:nth-child(2) {
+        background-color: $hover-color;
+        padding: 0.3rem;
+        border-radius: 5px;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.nav-right {
+  right: 0;
+  top: 0;
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+  border-left: 1px solid $border-color;
+  transform: translate(300px, 0px);
+
+  .nav-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .profile-nav-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      img {
+        object-fit: cover;
+        width: 30px;
+        border-radius: 100%;
+        border: 1px solid $border-color;
+      }
+      .profile-nav-info {
+        margin-left: 0.5rem;
+        h3 {
+          color: $white;
+          font-size: 0.8rem;
+        }
+        p {
+          font-size: 0.8rem;
+          color: $gray;
+        }
+      }
+    }
+    .profile-settings-nav {
+      display: flex;
+      i {
+        padding: 0.3rem;
+        border-radius: 5px;
+        &:hover {
+          @extend %hover-effect;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.active-nav {
+  transform: translate(0px, 0px);
+}

@@ -1,0 +1,28 @@
+@import "./general-variables";
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2.5rem 2rem;
+  gap: 1rem;
+  background-color: $light-black;
+  margin-top: auto;
+  i {
+    font-size: 1.5rem;
+  }
+  p {
+    color: $gray;
+    font-size: 0.7rem;
+  }
+  a {
+    color: $gray;
+    font-size: 0.7rem;
+    text-decoration: none;
+    &:hover {
+      color: $blue;
+      text-decoration: underline;
+    }
+  }
+}

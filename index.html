@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kisisellhesap (ahmet can)</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./logo.png" />
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js"></script>
+  </head>
+  <body>
+    <div class="active-bg"></div>
+    <main>
+      <header>
+        <div class="header-wrapper">
+          <div class="header-top">
+            <div class="header-top-left">
+              <i class="bx bx-menu" id="h-left-menu"></i>
+              <a href=""> <i class="bx bxl-github logo"></i></a>
+              <a href="#"><p class="username">kisisellhesap</p></a>
+            </div>
+            <div class="header-top-right">
+              <div class="search-bar-wrapper">
+                <div class="search-bar">
+                  <i class="bx bx-search-alt-2"></i>
+                  <p>Type <span>/</span> to search</p>
+                </div>
+              </div>
+
+              <div class="search-page">
+                <div class="search-page-input-wrapper">
+                  <i class="bx bx-search-alt-2"></i>
+                  <div class="search-page-input-content">
+                    <input type="text" class="search-page-input" />
+                    <i class="bx bx-x" id="search-page-x"></i>
+                  </div>
+                </div>
+
+                <div class="owner-container">
+                  <h5>Owners</h5>
+                  <div class="owner-list">
+                    <!-- <div class="owner-card">
+                      <i class="bx bx-laptop"></i>
+                      <p>Ahmet Can</p>
+
+                      <span>Jump to</span>
+                    </div> -->
+                  </div>
+                </div>
+
+                <div class="search-page-footer">
+                  <p>Search syntax tips</p>
+                  <p>Give feedback</p>
+                </div>
+              </div>
+
+              <div class="create-new-btn">
+                <i class="bx bx-plus"></i>
+                <i class="bx bxs-down-arrow"></i>
+              </div>
+
+              <a href="#" id="chat-icon"> <i class="bx bx-chat"></i></a>
+              <a href="#" id="pull-icon"
+                ><i class="bx bx-git-pull-request"></i
+              ></a>
+
+              <a href="#"><i class="bx bx-bell"></i></a>
+              <img
+                src="./profile-image.jpeg"
+                alt="profile-image"
+                id="h-right-menu"
+              />
+            </div>
+          </div>
+
+          <div class="header-bottom">
+            <div class="h-bottom-btn">
+              <i class="bx bx-book-open"></i>
+              <p>Overview</p>
+            </div>
+            <div class="h-bottom-btn">
+              <i class="bx bx-laptop"></i>
+              <a href="" class="special-repo" target="_blank">
+                <p>Repositories</p>
+                <span class="repo-count">39</span>
+              </a>
+            </div>
+            <div class="h-bottom-btn">
+              <i class="bx bx-table"></i>
+              <p>Projects</p>
+            </div>
+            <div class="h-bottom-btn">
+              <i class="bx bx-package"></i>
+              <p>Packages</p>
+            </div>
+            <div class="h-bottom-btn">
+              <i class="bx bx-star"></i>
+              <p>Stars</p>
+            </div>
+
+            <div class="h-bottom-btn ml-dot">
+              <i class="bx bx-dots-horizontal-rounded"></i>
+            </div>
+
+            <div class="res-bar">
+              <div class="h-bottom-btn">
+                <i class="bx bx-book-open"></i>
+                <p>Overview</p>
+              </div>
+              <div class="h-bottom-btn">
+                <i class="bx bx-laptop"></i>
+                <p>Repositories</p>
+                <span style="display: none">39</span>
+              </div>
+              <div class="h-bottom-btn">
+                <i class="bx bx-table"></i>
+                <p>Projects</p>
+              </div>
+              <div class="h-bottom-btn">
+                <i class="bx bx-package"></i>
+                <p>Packages</p>
+              </div>
+              <div class="h-bottom-btn">
+                <i class="bx bx-star"></i>
+                <p>Stars</p>
+                <span style="display: none">2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="nav-left nav-res">
+        <div class="nav-body">
+          <i class="bx bxl-github"></i>
+          <i class="bx bx-x" id="h-left-close-menu"></i>
+        </div>
+
+        <div class="nav-wrapper" style="margin-top: 0.2rem">
+          <nav class="nav-items">
+            <div class="nav-item">
+              <i class="bx bx-home-alt"></i>
+              <p>Home</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-stop-circle"></i>
+              <p>Issues</p>
+            </div>
+
+            <div class="nav-item">
+              <i class="bx bx-git-pull-request"></i>
+              <p>Pull requests</p>
+            </div>
+
+            <div class="nav-item">
+              <i class="bx bx-table"></i>
+              <p>Projects</p>
+            </div>
+
+            <div class="nav-item">
+              <i class="bx bx-chat"></i>
+              <p>Discussions</p>
+            </div>
+
+            <div class="nav-item">
+              <i class="bx bx-laptop"></i>
+              <p>Codespaces</p>
+            </div>
+          </nav>
+        </div>
+        <div class="nav-wrapper">
+          <nav class="nav-items">
+            <div class="nav-item">
+              <i class="bx bx-edit-alt"></i>
+              <p>Explore</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-gift"></i>
+              <p>Marketplace</p>
+            </div>
+          </nav>
+        </div>
+        <div class="nav-wrapper" style="border: none">
+          <div class="nav-title">
+            <span>Repositories</span>
+            <i class="bx bx-search-alt-2"></i>
+          </div>
+          <nav class="nav-items-repo">
+            <!-- <div class="nav-item">
+              <img src="./profile-image.jpeg" alt="profile-image" />
+              <a href="" class="repo-left-name" target="_blank">Project 1</a>
+            </div> -->
+          </nav>
+          <a href="#" class="fake-show">Show more</a>
+        </div>
+
+        <div class="footer-res-nav">
+          <p>© 2024 GitHub, Inc.</p>
+          <div class="footer-list">
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Security</a>
+            <a href="#">Status</a>
+            <a href="#">Do not share my personal information</a>
+            <a href="#">Manage Cookies</a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-right nav-res">
+        <div class="nav-body">
+          <div class="profile-nav-content">
+            <img
+              src="./profile-image.jpeg"
+              alt="profile-image"
+              class="profile-right-img"
+            />
+            <div class="profile-nav-info">
+              <h3 class="profile-right-username">kisisellhesap</h3>
+              <p class="profile-right-name">ahmet can</p>
+            </div>
+          </div>
+          <div class="profile-settings-nav">
+            <i class="bx bx-code"></i>
+            <i class="bx bx-x" id="h-right-close-menu"></i>
+          </div>
+        </div>
+
+        <div class="nav-wrapper" style="margin-top: 0.2rem">
+          <nav class="nav-items">
+            <div class="nav-item">
+              <i class="bx bx-smile"></i>
+              <p>Set status</p>
+            </div>
+          </nav>
+        </div>
+        <div class="nav-wrapper">
+          <nav class="nav-items">
+            <div class="nav-item">
+              <i class="bx bx-user"></i>
+              <p>Your profile</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-laptop"></i>
+              <p>Your repositories</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-group"></i>
+              <p>Your Copilot</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-detail"></i>
+              <p>Your projects</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-star"></i>
+              <p>Your stars</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-code-block"></i>
+              <p>Your gists</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-buildings"></i>
+              <p>Your organizations</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bxl-dribbble"></i>
+              <p>Your enterprises</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-heart"></i>
+              <p>Your sponsors</p>
+            </div>
+          </nav>
+        </div>
+        <div class="nav-wrapper">
+          <nav class="nav-items">
+            <div class="nav-item">
+              <i class="bx bx-upload"></i>
+              <p>Try Enterprise</p>
+              <span>Free</span>
+            </div>
+            <div class="nav-item">
+              <i class="bx bxs-flask"></i>
+              <p>Feature preview</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-cog"></i>
+              <p>Settings</p>
+            </div>
+          </nav>
+        </div>
+        <div class="nav-wrapper">
+          <nav class="nav-items">
+            <div class="nav-item">
+              <i class="bx bx-book-open"></i>
+              <p>Github Docs</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-group"></i>
+              <p>Feature Support</p>
+            </div>
+            <div class="nav-item">
+              <i class="bx bx-chat"></i>
+              <p>Github Community</p>
+            </div>
+          </nav>
+        </div>
+        <div class="nav-wrapper" style="border: none">
+          <nav class="nav-items">
+            <div class="nav-item">
+              <i class="bx bx-upload" style="transform: rotate(90deg)"></i>
+              <p>Sign out</p>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="profile-wrapper">
+        <div class="profile-container">
+          <!-- <div class="profile-content-info">
+            <div class="profile-content-top">
+              <div class="img-div-content">
+                <img src="./profile-image.jpeg" alt="profile-image" />
+              </div>
+              <div class="smile-content">
+                <i class="bx bx-smile"></i>
+                <p>Set status</p>
+              </div>
+
+              <div class="profile-username-content">
+                <h2>ahmet can</h2>
+                <p>kisisellhesap</p>
+              </div>
+            </div>
+
+            <p>He is continue to run in front end path.. like a turtle :/</p>
+            <button>Edit profile</button>
+            <div class="profile-follows-content">
+              <div class="follows-container">
+                <a
+                  href="https://github.com/kisisellhesap?tab=followers"
+                  class="followers-content"
+                >
+                  <i class="bx bx-group"></i>
+                  <p>66</p>
+                  <span>followers</span>
+                </a>
+                <i class="bx bxs-circle" style="font-size: 0.2rem"></i>
+                <a
+                  href="https://github.com/kisisellhesap?tab=following"
+                  class="following-content"
+                >
+                  <p>75</p>
+                  <span>following</span>
+                </a>
+              </div>
+              <div class="profile-email-link-content">
+                <div class="el-content">
+                  <i class="bx bx-envelope"></i>
+                  <a href="#">ahmetcannkaragoz@gmail.com</a>
+                </div>
+                <div class="el-content">
+                  <i class="bx bx-link"></i>
+                  <a href="https://github.com/flycode00"
+                    >https://github.com/flycode00</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <footer>
+        <div style="display: flex; align-items: center; gap: 0.5rem">
+          <i class="bx bxl-github"></i>
+          <p>© 2024 GitHub, Inc.</p>
+        </div>
+
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Security</a>
+        <a href="#">Status</a>
+        <a href="#">Docs</a>
+        <a href="#">Contact</a>
+        <a href="#">Manage cookies</a>
+
+        <a href="#">Do not share my personal information</a>
+      </footer>
+    </main>
+    <!--   -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
