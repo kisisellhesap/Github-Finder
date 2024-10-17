@@ -62,7 +62,7 @@ const displayData = (data) => {
     .querySelector(".profile-container")
     .insertAdjacentHTML("beforeend", user);
 
-  renderHeader(userLogin, userImg, userPublicRepo);
+  renderHeader(userLogin, userImg, userPublicRepo, userName);
   renderRightNav(userLogin, userName, userImg);
   renderLeftNav(data.repos_url, userImg);
 };
@@ -282,7 +282,7 @@ searchPageInput.addEventListener(
           displayData(data);
         });
     }
-  }, 500)
+  }, 1000)
 );
 
 xSearchPage.addEventListener("click", function () {
@@ -302,15 +302,23 @@ mlDot.addEventListener("click", function () {
   resBar.classList.toggle("active-res-bar");
 });
 
-function renderHeader(userLogin, userImg, userPublicRepo) {
+function renderHeader(userLogin, userImg, userPublicRepo, userName) {
   const repoCount = (document.querySelector(".repo-count").textContent =
     userPublicRepo);
-  const userName = (document.querySelector(".username").textContent =
+  const userNameGithub = (document.querySelector(".username").textContent =
     userLogin);
   const repoUrl = document
     .querySelector(".special-repo")
     .setAttribute("href", `https://github.com/${userLogin}`);
   rightOpenIcon.setAttribute("src", userImg);
+
+  // html title change
+  let title = `${userLogin} (${userName})`;
+  if (userName == "") {
+    title = `${userLogin}`;
+  }
+  document.title = title;
+  // console.log(document.title);
 }
 
 function renderRightNav(userLogin, userName, userImg) {
